@@ -173,6 +173,7 @@
             }
 
             .showcase-item {
+                position: relative;
                 width: 400px;
                 min-height: 100%;
                 background: white;
@@ -189,7 +190,7 @@
                 max-height: 100%;
             }
 
-            .showcase-description {
+            .showcase-bottom {
                 padding: 1em;
                 padding-bottom: 0.85em;
                 font-size: 0.85em;
@@ -205,8 +206,18 @@
             .showcase-info {
                 display: flex;
                 justify-content: space-between;
+                position: absolute;
+                left: 0;
+                bottom: 0.85em;
+                width: 100%;
+                padding: 0 1em;
                 opacity: 0.6666;
                 margin-top: 0.85em;
+            }
+
+            .showcase-info.space-taker {
+                position: initial;
+                visibility: hidden;
             }
 
             .stained-tile.single-surrounder {
@@ -238,7 +249,7 @@
                     display: none;
                 }
             }
-            @media (max-width: 899px) {
+            @media (max-width: 719px) {
                 .header {
                     font-size: 0.5em;
                     padding: 0 9px;
@@ -338,12 +349,15 @@
                                     <div class="showcase-image-container">
                                         <img src="images/projects/azusa999.png">
                                     </div>
-                                    <div class="showcase-description">
-                                        <h2>Azusa 999</h2>
-                                        <p>
-                                            The 1997 PC-98 adventure about death, family, and an otherworldly train. In English for the first time in two decades. Translating this was an adventure in itself!
-                                        </p>
-                                        <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Released!</div></div>
+                                    <div class="showcase-bottom">
+                                        <div class="showcase-description">
+                                            <h2>Azusa 999</h2>
+                                            <p>
+                                                The 1997 PC-98 adventure about death, family, and an otherworldly train. In English for the first time in two decades. A flawed diamond, forgotten by time.
+                                            </p>
+                                        </div>
+                                        <div class="showcase-info space-taker"><div class="showcase-date">April 24th, 2019</div><div class="showcase-status">Released!</div></div>
+                                        <div class="showcase-info"><div class="showcase-date">April 24th, 2019</div><div class="showcase-status">Released!</div></div>
                                     </div>
                                 </div>
                             </div>
@@ -355,11 +369,14 @@
                                     <div class="showcase-image-container">
                                         <img src="images/projects/f-ramune.jpg">
                                     </div>
-                                    <div class="showcase-description">
-                                        <h2>F-Ramune</h2>
-                                        <p>
-                                            A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
-                                        </p>
+                                    <div class="showcase-bottom">
+                                        <div class="showcase-description">
+                                            <h2>F-Ramune</h2>
+                                            <p>
+                                                A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+                                            </p>
+                                        </div>
+                                        <div class="showcase-info space-taker"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
                                         <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
                                     </div>
                                 </div>
@@ -372,12 +389,15 @@
                                     <div class="showcase-image-container">
                                         <img src="images/projects/f-ramune.jpg">
                                     </div>
-                                    <div class="showcase-description">
-                                        <h2>F-Ramune</h2>
-                                        <p>
-                                            A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
-                                        </p>
-                                        <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                    <div class="showcase-bottom">
+                                        <div class="showcase-description">
+                                            <h2>F-Ramune</h2>
+                                            <p>
+                                                A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+                                            </p>
+                                            <div class="showcase-info space-taker"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                            <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -389,12 +409,15 @@
                                     <div class="showcase-image-container">
                                         <img src="images/projects/f-ramune.jpg">
                                     </div>
-                                    <div class="showcase-description">
-                                        <h2>F-Ramune</h2>
-                                        <p>
-                                            A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
-                                        </p>
-                                        <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                    <div class="showcase-bottom">
+                                        <div class="showcase-description">
+                                            <h2>F-Ramune</h2>
+                                            <p>
+                                                A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+                                            </p>
+                                            <div class="showcase-info space-taker"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                            <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
