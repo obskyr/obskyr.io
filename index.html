@@ -9,21 +9,27 @@
 
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
-                // This here is a… just an absolutely *horrible* hack to fix
-                // a baffling issue: on mobile Chrome, Coiny includes a bunch
-                // of whitespace above the letters, for some reason. Blerk.
-                var canvas = document.createElement('canvas');
-                var context = canvas.getContext('2d');
-                context.font = "70px Coiny";
-                var ascent = context.measureText("a").actualBoundingBoxAscent;
-                if (ascent >= 33.5) { // Value chosen through testing.
-                    document.body.classList.add("low-font");
+                if ('ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+                    document.body.classList.add("no-hover");
                 }
             }, false);
         </script>
         
-        <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
         <style type="text/css">
+            /*
+                Google's hosted version of Coiny has broken vertical metrics
+                that act differently across platforms… I ran it through Font-
+                Squirrel's webfont generator with the "auto-adjust vertical
+                metrics" option enabled, and it works! What what!
+            */
+            @font-face {
+                font-family: "Coiny";
+                src: url("fonts/Coiny-Regular.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
             * {box-sizing: border-box;}
             html, body {margin: 0; min-width: 100%; min-height: 100vh;}
 
@@ -46,16 +52,13 @@
             }
 
             h1, h2, h3, h4, h5, h6 {
+                position: relative;
+                bottom: 0.3em;
                 margin-bottom: 0;
                 line-height: 1.1;
                 font-family: Coiny, sans-serif;
                 font-weight: 400;
                 letter-spacing: -0.02em;
-            }
-
-            body.low-font h1, body.low-font h2, body.low-font h3, body.low-font h4, body.low-font h5, body.low-font h6 {
-                position: relative;
-                bottom: 0.3em;
             }
 
             .page {
@@ -137,7 +140,7 @@
                 white-space: nowrap;
             }
 
-            body.low-font .name, body.low-font .items {
+            .name, .items {
                 transform: translateY(-0.1em);
             }
 
@@ -216,6 +219,11 @@
                 z-index: 0;
             }
 
+            .no-image {
+                pointer-events: none;
+                user-select: none;
+            }
+
             .showcase-bottom {
                 padding: 1em;
                 padding-bottom: 0.85em;
@@ -246,9 +254,44 @@
                 visibility: hidden;
             }
 
+            .showcase-item.see-more {
+                background: none;
+                text-shadow:0 0 5px rgba(0, 0, 0, 0.2);
+                color: white;
+                user-select: none;
+            }
+
+            .showcase-item.see-more .showcase-image-placeholder {
+                color: white;
+                background: none;
+            }
+            
+            .showcase-see-more-container {
+                position: absolute;
+                left: 0;
+                top: 47.5%;
+                width: 100%;
+                transform: translateY(-60%);
+                text-align: center;
+                font-size: 2em;
+                transition: transform 1s cubic-bezier(.2,.6,.55,.9);
+            }
+
+            .showcase-see-more-container .dots {
+                font-size: 2em;
+            }
+
             .stained-tile.single-surrounder {
                 display: none;
                 min-width: 1px;
+            }
+
+            .cutout-container.third-space-taker {
+                display: none;
+            }
+
+            .cutout-container.third-space-taker > * {
+                visibility: hidden;
             }
 
             @media (min-width: 1400px) {
@@ -261,6 +304,10 @@
                 }
                 .stained-tile.n3:last-child {
                     display: none;
+                }
+                .cutout-container.third-space-taker {
+                    display: block;
+                    background-color:rgba(255, 255, 255, 0.25);
                 }
             }
             @media (min-width: 900px) and (max-width: 1399px) {
@@ -349,15 +396,17 @@
                 }
             }
 
-            @media (hover: hover) {
-                .floaty:hover {
-                    top: -5px;
-                }
+            body:not(.no-hover) .floaty:hover {
+                top: -5px;
+            }
 
-                .floaty:hover + .heart {
-                    opacity: 1;
-                    bottom: calc(0.2em + 5px);
-                }
+            body:not(.no-hover) .floaty:hover + .heart {
+                opacity: 1;
+                bottom: calc(0.2em + 5px);
+            }
+
+            body:not(.no-hover) .showcase-item.see-more:hover .showcase-see-more-container {
+                transform: translateY(-65%);
             }
 
             @media screen and (hover: none) {
@@ -469,7 +518,7 @@
                                 <div class="showcase-item">
                                     <div class="showcase-image-container">
                                         <div class="showcase-image-placeholder">colorgram.py</div>
-                                        <img src="images/projects/missingno.png">
+                                        <img class="no-image" src="images/projects/missingno.png">
                                     </div>
                                     <div class="showcase-bottom">
                                         <div class="showcase-description">
@@ -485,6 +534,37 @@
                             </div>
                             <div class="stained-tile single-surrounder"></div>
                             <div class="stained-tile n1 n2"></div>
+                            <div class="stained-tile single-surrounder"></div>
+                            <div class="cutout-container">
+                                <div class="showcase-item see-more">
+                                    <div class="showcase-image-container">
+                                        <img class="no-image" src="images/projects/missingno.png">
+                                    </div>
+                                    <div class="showcase-see-more-container">
+                                        <span class="dots">•••</span><br>More projects
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stained-tile single-surrounder"></div>
+                            <div class="stained-tile n1"></div>
+                            <div class="stained-tile single-surrounder"></div>
+                            <div class="cutout-container third-space-taker">
+                                <div class="showcase-item see-more">
+                                    <div class="showcase-image-container">
+                                        <div class="showcase-image-placeholder">•••</div>
+                                        <img class="no-image" src="images/projects/missingno.png">
+                                    </div>
+                                    <div class="showcase-bottom">
+                                        <div class="showcase-description">
+                                            <p>
+                                                More projects
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stained-tile single-surrounder"></div>
+                            <div class="stained-tile n1 n2 n3"></div>
                         </div>
                         <div class="stained-tile"></div>
                     </div>
