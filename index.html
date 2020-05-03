@@ -35,12 +35,18 @@
                 font-size: 18px;
             }
 
+            a {
+                text-decoration: none;
+                color: #F26DE4;
+            }
+
             ::selection {
                 color: inherit;
                 background: rgba(0, 0, 0, 0.1);
             }
 
             h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 0;
                 line-height: 1.1;
                 font-family: Coiny, sans-serif;
                 font-weight: 400;
@@ -186,8 +192,28 @@
             }
 
             .showcase-image-container img {
+                position: relative;
                 max-width: 100%;
                 max-height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .showcase-image-placeholder {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(255,162,209,1) 0%, rgba(255,213,165,1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                font-family: Coiny, sans-serif;
+                font-size: 2.5em;
+                user-select: none;
+                z-index: 0;
             }
 
             .showcase-bottom {
@@ -255,25 +281,27 @@
                     display: none;
                 }
             }
-            @media (min-width: 640px) and (max-width: 899px) {
-                .page {
-                    min-width: 640px;
-                }
+            @media (max-width: 899px) {
                 .header {
                     font-size: 0.5em;
                     padding: 0 9px;
-                }
-                .content {
-                    width: 640px;
-                }
-                .text-content {
-                    width: auto;
                 }
                 .cutout-container {
                     padding-top: 0;
                 }
                 .stained-row.empty {
                     display: none;
+                }
+            }
+            @media (min-width: 640px) and (max-width: 899px) {
+                .page {
+                    min-width: 640px;
+                }
+                .content {
+                    width: 640px;
+                }
+                .text-content {
+                    width: auto;
                 }
                 .stained-tile.n2 {
                     width: 100%;
@@ -295,6 +323,9 @@
                 }
                 .text-content {
                     width: auto;
+                }
+                .cutout-container {
+                    width: 100%;
                 }
                 .stained-tile.n1:not(:last-child) {
                     width: 100%;
@@ -363,7 +394,7 @@
                                     <em>Obskyr</em> is Swedish for “obscure”.
                                 </h1>
                                 <p>
-                                    ROM hacking. Japanese-to-English translation. Programming. Electronics. I do a lot of things, some of which you'll surely want to check out! But more importantly, I've got a jammin' personality, and I'm way approachable – so don't hesitate to reach out if you feel like it. My main online presence is on Twitter, so head on over there!
+                                    ROM hacking. Japanese-to-English translation. Programming. Electronics. I do a lot of things, some of which you'll surely want to check out! But more importantly, I've got a jammin' personality, and I'm way approachable – so don't hesitate to reach out if you feel like it. My main online presence is <a href="https://twitter.com/obskyr/">on Twitter</a>, so head on over there!
                                 </p>
                             </div>
                         </div>
@@ -376,6 +407,7 @@
                             <div class="cutout-container">
                                 <div class="showcase-item">
                                     <div class="showcase-image-container">
+                                        <div class="showcase-image-placeholder">Azusa 999</div>
                                         <img src="images/projects/azusa999.png">
                                     </div>
                                     <div class="showcase-bottom">
@@ -416,16 +448,16 @@
                             <div class="cutout-container">
                                 <div class="showcase-item">
                                     <div class="showcase-image-container">
-                                        <img src="images/projects/f-ramune.jpg">
+                                        <img src="images/projects/spaceworld.jpg">
                                     </div>
                                     <div class="showcase-bottom">
                                         <div class="showcase-description">
-                                            <h2>F-Ramune</h2>
+                                            <h2>Spaceworld 1997 Pokémon Gold & Silver demos</h2>
                                             <p>
-                                                A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+                                                I translated all of the text in this legendary leak, and did quite a bit of disassembly and hacking work to boot. Cryin' shame the team fell to pieces. Art by <a href="https://twitter.com/RacieBeep">RacieB</a>!
                                             </p>
-                                            <div class="showcase-info space-taker"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
-                                            <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                            <div class="showcase-info space-taker"><div class="showcase-date">May 2018—Sometime 2019</div><div class="showcase-status">Fizzled out</div></div>
+                                            <div class="showcase-info"><div class="showcase-date">May 2018—Sometime 2019</div><div class="showcase-status">Fizzled out</div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -436,23 +468,23 @@
                             <div class="cutout-container">
                                 <div class="showcase-item">
                                     <div class="showcase-image-container">
-                                        <img src="images/projects/f-ramune.jpg">
+                                        <div class="showcase-image-placeholder">colorgram.py</div>
+                                        <img src="images/projects/missingno.png">
                                     </div>
                                     <div class="showcase-bottom">
                                         <div class="showcase-description">
-                                            <h2>F-Ramune</h2>
+                                            <h2>colorgram.py</h2>
                                             <p>
-                                                A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+                                                A Python library for extracting colors from images! Hey!
                                             </p>
-                                            <div class="showcase-info space-taker"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
-                                            <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                            <div class="showcase-info space-taker"><div class="showcase-date">Aug 2016</div><div class="showcase-status">Production!</div></div>
+                                            <div class="showcase-info"><div class="showcase-date">Aug 2016</div><div class="showcase-status">Production!</div></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="stained-tile single-surrounder"></div>
                             <div class="stained-tile n1 n2"></div>
-                            <div class="stained-tile single-surrounder"></div>
                         </div>
                         <div class="stained-tile"></div>
                     </div>
