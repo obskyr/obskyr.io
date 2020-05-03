@@ -5,9 +5,24 @@
         <title>obskyr – 100% passion.</title>
         <meta name="theme-color" content="#FFB7BF">
 
-        <meta name="viewport" content="width=500, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                // This here is a… just an absolutely *horrible* hack to fix
+                // a baffling issue: on mobile Chrome, Coiny includes a bunch
+                // of whitespace above the letters, for some reason. Blerk.
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                context.font = "70px Coiny";
+                var ascent = context.measureText("a").actualBoundingBoxAscent;
+                if (ascent >= 33.5) { // Value chosen through testing.
+                    document.body.classList.add("low-font");
+                }
+            }, false);
+        </script>
         
-        <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:ital@0;1&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
         <style type="text/css">
             * {box-sizing: border-box;}
             html, body {margin: 0; min-width: 100%; min-height: 100vh;}
@@ -17,7 +32,7 @@
                 color: rgb(81, 74, 98);
                 font-family: Montserrat, sans-serif;
                 text-align: center;
-                font-size: 18px
+                font-size: 18px;
             }
 
             ::selection {
@@ -30,6 +45,11 @@
                 font-family: Coiny, sans-serif;
                 font-weight: 400;
                 letter-spacing: -0.02em;
+            }
+
+            body.low-font h1, body.low-font h2, body.low-font h3, body.low-font h4, body.low-font h5, body.low-font h6 {
+                position: relative;
+                bottom: 0.3em;
             }
 
             .page {
@@ -69,9 +89,11 @@
             .header {
                 display: flex;
                 align-items: center;
+                height: 6em;
                 padding: 0 1em;
                 color: white;
                 text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                user-select: none;
             }
 
             .header a {
@@ -83,7 +105,7 @@
             .name {
                 display: inline-block;
                 position: relative;
-                font-size: 70px;
+                font-size: 3.8888em;
                 cursor: default;
                 white-space: nowrap;
             }
@@ -105,9 +127,12 @@
 
             .items {
                 display: inline-block;
-                font-size: 40px;
-                user-select: none;
+                font-size: 2.2222em;
                 white-space: nowrap;
+            }
+
+            body.low-font .name, body.low-font .items {
+                transform: translateY(-0.1em);
             }
 
             .item {
@@ -214,11 +239,9 @@
                 }
             }
             @media (max-width: 899px) {
-                .name {
-                    font-size: 45px;
-                }
-                .items {
-                    font-size: 20px;
+                .header {
+                    font-size: 0.5em;
+                    padding: 0 9px;
                 }
 
                 .content {
@@ -227,9 +250,15 @@
                 .text-content {
                     width: auto;
                 }
+                .cutout-container {
+                    padding-top: 0;
+                }
+                .stained-row.empty {
+                    display: none;
+                }
                 .stained-tile.n1:not(:last-child) {
                     width: 100%;
-                    height: 1em;
+                    height: 0;
                 }
                 .stained-tile.n1:last-child {
                     display: none;
@@ -249,7 +278,7 @@
                 }
             }
 
-            @media screen and (hover: hover) {
+            @media (hover: hover) {
                 .floaty:hover {
                     top: -5px;
                 }
@@ -263,6 +292,12 @@
             @media screen and (hover: none) {
                 .heart {
                     padding: 0;
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                body {
+                    font-size: 14px;
                 }
             }
         </style>
@@ -285,7 +320,7 @@
                         <div class="text-column">
                             <div class="text-content">
                                 <h1>
-                                    <em>Obskyr</em> is Swedish for "obscure".
+                                    <em>Obskyr</em> is Swedish for “obscure”.
                                 </h1>
                                 <p>
                                     ROM hacking. Japanese-to-English translation. Programming. Electronics. I do a lot of things, some of which you'll surely want to check out! But more importantly, I've got a jammin' personality, and I'm way approachable – so don't hesitate to reach out if you feel like it. My main online presence is on Twitter, so head on over there!
@@ -308,7 +343,7 @@
                                         <p>
                                             The 1997 PC-98 adventure about death, family, and an otherworldly train. In English for the first time in two decades. Translating this was an adventure in itself!
                                         </p>
-                                        <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Done!</div></div>
+                                        <div class="showcase-info"><div class="showcase-date">Jan 2019—May 2019</div><div class="showcase-status">Released!</div></div>
                                     </div>
                                 </div>
                             </div>
