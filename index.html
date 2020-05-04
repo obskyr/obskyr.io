@@ -164,6 +164,23 @@
                 content: " •";
             }
 
+            .footer {
+                height: 6em;
+                text-align: center;
+                color: white;
+            }
+
+            .footer > * {
+                position: relative;
+                top: 50%;
+                transform: translateY(-55%);
+            }
+
+            .footer svg {
+                height: 3.5em;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+            }
+
             .text-column {
                 text-align: center;
                 background: white;
@@ -443,7 +460,7 @@
                                     <em>Obskyr</em> is Swedish for “obscure”.
                                 </h1>
                                 <p>
-                                    ROM hacking. Japanese-to-English translation. Programming. Electronics. I do a lot of things, some of which you'll surely want to check out! But more importantly, I've got a jammin' personality, and I'm way approachable – so don't hesitate to reach out if you feel like it. My main online presence is <a href="https://twitter.com/obskyr/">on Twitter</a>, so head on over there!
+                                    ROM hacking. Japanese-to-English translation. Programming. Electronics. I'm Samuel Messner, <em>obskyr</em> online, and I do a lot of things – some of which you'll surely want to check out! But more importantly, I've got a jammin' personality, and I'm way approachable – so don't hesitate to reach out if you feel like it. My main online presence is <a href="https://twitter.com/obskyr/">on Twitter</a>, so head on over there!
                                 </p>
                             </div>
                         </div>
@@ -503,7 +520,7 @@
                                         <div class="showcase-description">
                                             <h2>Spaceworld 1997 Pokémon Gold & Silver demos</h2>
                                             <p>
-                                                I translated all of the text in this legendary leak, and did quite a bit of disassembly and hacking work to boot. Cryin' shame the team fell to pieces. Art by <a href="https://twitter.com/RacieBeep">RacieB</a>!
+                                                I translated all of the text in this legendary leak, and did quite a bit of disassembly, hacking, and documentation work to boot. Cryin' shame the team fell to pieces. Art by <a href="https://twitter.com/RacieBeep">RacieB</a>!
                                             </p>
                                             <div class="showcase-info space-taker"><div class="showcase-date">May 2018—Sometime 2019</div><div class="showcase-status">Fizzled out</div></div>
                                             <div class="showcase-info"><div class="showcase-date">May 2018—Sometime 2019</div><div class="showcase-status">Fizzled out</div></div>
@@ -551,15 +568,10 @@
                             <div class="cutout-container third-space-taker">
                                 <div class="showcase-item see-more">
                                     <div class="showcase-image-container">
-                                        <div class="showcase-image-placeholder">•••</div>
                                         <img class="no-image" src="images/projects/missingno.png">
                                     </div>
-                                    <div class="showcase-bottom">
-                                        <div class="showcase-description">
-                                            <p>
-                                                More projects
-                                            </p>
-                                        </div>
+                                    <div class="showcase-see-more-container">
+                                        <span class="dots">•••</span><br>More projects
                                     </div>
                                 </div>
                             </div>
@@ -572,6 +584,17 @@
                 </div>
                 <div class="stained-tile"></div>
             </div>
+        </div>
+        <div class="footer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.433 35.433" fill="currentColor">
+                <g transform="translate(0 -1016.93)">
+                  <path d="M17.717 1016.93c-9.764 0-17.717 7.953-17.717 17.717 0 9.763 7.953 17.714 17.717 17.714 9.763 0 17.717-7.95 17.717-17.715 0-9.763-7.954-17.716-17.717-17.716zm0 3.543a14.147 14.147 0 0114.174 14.174 14.146 14.146 0 01-14.174 14.171 14.146 14.146 0 01-14.174-14.171 14.147 14.147 0 0114.174-14.174z"/>
+                  <ellipse ry="3.543" rx="2.657" cy="1031.053" cx="12.63"/>
+                  <path d="M22.63 1028.397c-1.923 0-3.75 1.098-4.34 2.99a1.772 1.772 0 103.382 1.054c.053-.169.398-.502.959-.502.56 0 .906.333.959.502a1.772 1.772 0 103.383-1.054c-.59-1.892-2.419-2.99-4.342-2.99zM18.91 1036.673a2.742 2.742 0 00-2.072.762.879.893 60.007 101.234 1.254.945.945 0 01.967-.201.884.884 0 01.602.746.813.813 0 01-.313.715.879.893 60.007 00-.572.62.879.893 60.007 00-.008.026.879.893 60.007 00.176.807c.1.261.069.543-.098.773a.922.922 0 01-.906.356.914.914 0 01-.734-.643.879.893 60.007 10-1.715.488 2.65 2.65 0 002.123 1.893 2.737 2.737 0 002.674-1.078c.448-.62.59-1.392.423-2.108.514-.539.791-1.276.723-2.03a2.624 2.624 0 00-1.758-2.23 2.747 2.747 0 00-.746-.15z"/>
+                  <path d="M23.643 1036.89a1.063 1.063 0 00-1.043 1.182l.224 2.287a1.063 1.063 0 102.115-.207l-.224-2.287a1.063 1.063 0 00-1.072-.974z" fill-rule="evenodd"/>
+                  <circle transform="rotate(-5.59)" r="1.063" cy="1040.236" cx="-77.564"/>
+                </g>
+              </svg>
         </div>
     </body>
 </html>
