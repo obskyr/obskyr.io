@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>obskyr{% if page.title != blank %} – {{page.title}}{% endif %}</title>
+        <meta name="theme-color" content="{{ theme_color }}">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                if ('ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+                    document.body.classList.add("no-hover");
+                }
+            }, false);
+        </script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+        <style type="text/css">
+            /*
+                Google's hosted version of Coiny has broken vertical metrics
+                that act differently across platforms… I ran it through Font-
+                Squirrel's webfont generator with the "auto-adjust vertical
+                metrics" option enabled, and it works! What what!
+            */
+            @font-face {
+                font-family: "Coiny";
+                src: url("/assets/fonts/Coiny-Regular.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+            {% include css/main.css %}
+        </style>
+    </head>
+    <body>
+        {% include header.html %}
+        <div class="page">
+            <div class="stained-row">
+                <div class="stained-tile"></div>
+                <div class="content">
+                    {{ content }}
+                </div>
+                <div class="stained-tile"></div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
