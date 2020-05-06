@@ -9,10 +9,10 @@
         <div class="showcase-bottom">
             <div class="showcase-description">
                 {% if include.item.link %}<a href="{{ include.item.link }}">{% endif %}<h2>{{ include.item.name }}</h2>{% if include.item.link %}</a>{% endif %}
-                {{ include.item.description | markdownify}}
+                {{ include.item.content }}
             </div>
-            <div class="showcase-info space-taker"><div class="showcase-date">{{ include.item.date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
-            <div class="showcase-info"><div class="showcase-date">{{ include.item.date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
+            <div class="showcase-info space-taker"><div class="showcase-date">{{ include.item.display-date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
+            <div class="showcase-info"><div class="showcase-date">{{ include.item.display-date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
         </div>
     </div>
 </div>

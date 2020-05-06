@@ -6,7 +6,7 @@ layout: default
 <div class="stained-row empty"><div class="stained-tile"></div></div>
 {% assign projects = site.empty_array %}
 {% for name in site.data.front-page-showcase %}
-{% assign matching = site.data.projects | where: "name", name  %}
+{% assign matching = site.projects | where: "name", name  %}
 {% assign projects = projects | concat: matching %}
 {% endfor %}
 {% include showcase-grid.html items=projects see-more=true %}
