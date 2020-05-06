@@ -1,13 +1,12 @@
 <div class="stained-row">
     <div class="stained-tile"></div>
     <div class="stained-row flex-grid pagewide">
-        {% assign see-more = "see-more" | split: "," %}
-        {% assign space-taker = "space-taker" | split: "," %}
-        {% assign items = include.items | concat: see-more %}
+        {% assign items = include.items %}
+        {% if include.see-more %}{% assign items = items | push: "see-more" %}{% endif %}
         {% assign length = items.size %}
         {% assign mod = length | modulo: 3 %}
         {% assign fillers = 3 | minus: mod %}
-        {% if fillers < 3 %}{% for i in (1..fillers) %}{% assign items = items | concat: space-taker %}{% endfor %}{% endif %}
+        {% if fillers < 3 %}{% for i in (1..fillers) %}{% assign items = items | push: "space-taker" %}{% endfor %}{% endif %}
         {% for item in items %}
         <div class="stained-tile single-surrounder"></div>
             {% if item == "see-more" %}

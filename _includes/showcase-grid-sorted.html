@@ -1,0 +1,2 @@
+{% assign items = include.items | sort: "sort-date" | reverse %}
+{% include showcase-grid.html items=items %}
