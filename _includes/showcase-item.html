@@ -1,0 +1,18 @@
+<div class="cutout-container">
+    <div class="showcase-item">
+        {% if include.item.link %}<a href="{{ include.item.link }}">{% endif %}
+            <div class="showcase-image-container">
+                <div class="showcase-image-placeholder">{{ include.item.name }}</div>
+                <img {% if include.item.image %}src="{{ "/assets/images/projects/" | append: include.item.image | relative_url }}"{% else %}class="no-image" src="{{ "/assets/images/projects/missingno.png" | relative_url }}"{% endif %}>
+            </div>
+        {% if include.item.link %}</a>{% endif %}
+        <div class="showcase-bottom">
+            <div class="showcase-description">
+                {% if include.item.link %}<a href="{{ include.item.link }}">{% endif %}<h2>{{ include.item.name }}</h2>{% if include.item.link %}</a>{% endif %}
+                {{ include.item.description | markdownify}}
+            </div>
+            <div class="showcase-info space-taker"><div class="showcase-date">{{ include.item.date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
+            <div class="showcase-info"><div class="showcase-date">{{ include.item.date }}</div><div class="showcase-status">{{ include.item.status }}</div></div>
+        </div>
+    </div>
+</div>

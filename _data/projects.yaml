@@ -1,0 +1,118 @@
+# Copy for easy adding:
+
+# - name:      
+#   link:      
+#   image:     
+#   sort-date: 
+#   date:      
+#   finished:  
+#   status:    
+#   description: |
+#     
+
+- name:      Game Boy cartridge immortalization mod
+  link:      https://twitter.com/obskyr/status/1136663157047463936
+  image:     immortalization.jpg
+  sort-date: 2019-07-07
+  date:      Feb 2019—Jul 2019
+  finished:  yes
+  status:    Done! (Ask me about it!)
+  description: |
+    Old video games' save chips run on batteries… and when those run out, your savefiles are gone forever. This hardware mod I developed for Game Boy (and Game Boy Color) cartridges makes your savefiles immortal!
+
+- name:      F-Ramune
+  link:      https://github.com/obskyr/f-ramune
+  image:     f-ramune.jpg
+  sort-date: 2019-03-28
+  date:      Jan 2019—May 2019
+  finished:  yes
+  status:    Done!
+  description: |
+    A device for testing and programming ferroelectric RAM chips! Lets you safely use cheap FRAM for cartridge immortalization.
+
+- name:      Lanette's Time Capsule
+  link:      http://obskyr.io/lanette/devlog/
+  image:     lanette.png
+  sort-date: 2015-10-23
+  date:      Late 2015—Present
+  finished:  no
+  status:    On the backburner
+  description: |
+    A device that lets you trade Pokémon between generations II and III – allowing you to bring your beloved mons all the way from the original Red and Blue up to today's very latest games. It works on emulator, but the hardware is as yet unfinished.
+
+- name:      Spaceworld 1997 Pokémon Gold & Silver demos
+  link:      https://twitter.com/TeamSpaceworld
+  image:     spaceworld.jpg
+  sort-date: 2018-05-01
+  date:      May 2018—Sometime 2019
+  finished:  no
+  status:    Fizzled out
+  description: |
+    I translated all of the text in this legendary leak, and did quite a bit of disassembly, hacking, and documentation work to boot. Cryin' shame the team fell to pieces. Art by [RacieB](https://twitter.com/RacieBeep)!
+
+- name:      colorgram.py
+  link:      https://github.com/obskyr/colorgram.py
+  sort-date: 2016-09-16
+  date:      Sep 2016
+  finished:  yes
+  status:    Production!
+  description: |
+    A Python library for extracting colors from images! Hey!
+
+- name:      Azusa 999
+  link:      /azusa999/
+  image:     azusa999.png
+  sort-date: 2020-04-24
+  date:      April 24th, 2020
+  finished:  yes
+  status:    Released!
+  description: |
+    The 1997 PC-98 adventure about death, family, and an otherworldly train. In English for the first time in over two decades. A flawed diamond, forgotten by time. With the translation comes a *Player's Companion*, which offers context on the game's development and explanations for cultural references.
+
+- name:      Telefang
+  link:      https://telefang.net/
+  image:     telefang.png
+  sort-date: 2018-01-07
+  date:      Jan 2018—Present
+  finished:  no
+  status:    In progress
+  description: |
+    A personality-packed monster collecting game for the Game Boy Color. You don't catch the monsters – you make friends with 'em and get their phone numbers. I'm working on this both as a hacker and the main translator!
+
+- name:      "Twilight Syndrome: The Search"
+  link:      null
+  image:     twilightsyndromethesearch.png
+  sort-date: 2019-09-20 # No idea when exactly I started this.
+  date:      Sep 2019—Present
+  finished:  no
+  status:    In progress
+  description: |
+    Human Entertainment's cult classic PlayStation 1 game about a group of girls investigating urban legends in their home town. Known in the West for being heavily referenced in *Danganronpa 2*. Can you believe it's never been fan translated!? Someone's gotta do it, and that someone is me.
+
+- name:      Dazzlie
+  link:      https://github.com/obskyr/dazzlie
+  sort-date: 2018-04-04
+  date:      Mar 2018—Present
+  finished:  no
+  status:    Alpha
+  description: |
+    A program that lets you convert between various retro tile graphics formats and PNG. So far it's been invaluable in my disassemblies, ROM hack build systems, and reverse engineering work!
+
+- name:      The Nightmare of Druaga Player's Companion
+  link:      https://docs.google.com/spreadsheets/d/111Rnb-wVsIWJO7tmQYYoyl-Zl6s6sNkmmqkcAbVqNHY/edit
+  image:     nightmareofdruaga.png
+  sort-date: 2019-10-05
+  date:      October 5th, 2019
+  finished:  yes
+  status:    Use it!
+  description: |
+    *The Nightmare of Druaga: Fushigino Dungeon*, the roguelike PS2 sequel to the classic *Tower of Druaga*, has a lot of secrets. When Arika localized it, though, they *removed the hints* for those secrets. This is a translation of all of those hints, so the game can be played in English as it was meant to be!
+
+- name:      khinsider.py
+  link:      https://github.com/obskyr/khinsider
+  sort-date: 2014-10-22
+  date:      Oct 2014—Present
+  finished:  yes
+  status:    Production!
+  description: |
+    A program for automatically downloading video game soundtracks from khinsider.com.

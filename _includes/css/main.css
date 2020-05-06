@@ -194,10 +194,13 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 0.5em;
     background: linear-gradient(135deg, rgba(255,162,209,1) 0%, rgba(255,213,165,1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    line-height: 1.1em;
+    text-align: center;
     font-family: Coiny, sans-serif;
     font-size: 2.5em;
     user-select: none;
@@ -220,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .showcase-description p {
     margin: 0.1em 0;
+}
+
+.showcase-description a h2 {
+    color: #FFA6D8;
 }
 
 .showcase-info {

@@ -1,0 +1,26 @@
+<div class="stained-row">
+    <div class="stained-tile"></div>
+    <div class="stained-row flex-grid pagewide">
+        {% assign see-more = "see-more" | split: "," %}
+        {% assign space-taker = "space-taker" | split: "," %}
+        {% assign items = include.items | concat: see-more %}
+        {% assign length = items.size %}
+        {% assign mod = length | modulo: 3 %}
+        {% assign fillers = 3 | minus: mod %}
+        {% if fillers < 3 %}{% for i in (1..fillers) %}{% assign items = items | concat: space-taker %}{% endfor %}{% endif %}
+        {% for item in items %}
+        <div class="stained-tile single-surrounder"></div>
+            {% if item == "see-more" %}
+            {% include showcase-see-more-item.html %}
+            {% elsif item == "space-taker" %}
+            {% include showcase-space-taker-item.html %}
+            {% else %}
+            {% include showcase-item.html item=item %}
+            {% endif %}
+        <div class="stained-tile single-surrounder"></div>
+        {% assign item-index = forloop.index %}
+        <div class="stained-tile{% for i in (1..3) %}{% assign mod = item-index | modulo: i %}{% if mod == 0 %} n{{i}}{% endif %}{% endfor %}"></div>
+        {% endfor %}
+    </div>
+    <div class="stained-tile"></div>
+</div>

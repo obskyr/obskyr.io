@@ -28,8 +28,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: obskyr
 github_username:  obskyr
-
 theme_color: "#FFB7BF"
+
+empty_array: []
 
 # Build settings
 # theme: minima
