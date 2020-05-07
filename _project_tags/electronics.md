@@ -1,0 +1,4 @@
+---
+singular: electronics
+plural:   electronics
+---

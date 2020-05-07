@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<div class="stained-row empty"><div class="stained-tile"></div></div>
+{% assign description = site.pages | where: "name", "projects.md" | map: "content" | first %}
+{% include projects-top.html description=description tag=page.slug %}
+<div class="stained-row empty"><div class="stained-tile"></div></div>
+{% assign projects = site.projects | where_exp: "item", "item.tags contains page.slug" %}
+{% include showcase-grid-sorted.html items=projects %}
+<div class="stained-row empty"><div class="stained-tile"></div></div>

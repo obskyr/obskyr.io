@@ -26,6 +26,7 @@ description: >-
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: pretty
 twitter_username: obskyr
 github_username:  obskyr
 theme_color: "#FFB7BF"
@@ -33,7 +34,17 @@ theme_color: "#FFB7BF"
 empty_array: []
 
 collections:
-  - projects
+  projects: {}
+  project_tags:
+    output: true
+    permalink: /projects/tags/:name/
+
+defaults:
+  - scope:
+      path: ''
+      type: 'project_tags'
+    values:
+      layout: 'project-tag'
 
 # Build settings
 # theme: minima

@@ -1,0 +1,12 @@
+<div class="cutout-container">
+    <div class="text-column">
+        <div class="text-content">
+            <h1>Projects</h1>
+            {{ include.description }}
+            <p>
+                View: {% if include.tag %}<a href="/projects/">{% else %}<strong>{% endif %}all{% if include.tag %}</a>{% else %}</strong>{% endif %}
+                {% for tag in site.project_tags %} • {% if tag.slug == include.tag %}<strong>{{ tag.plural }}</strong>{% else %}<a href="{{ tag.url }}">{{ tag.plural }}</a>{% endif %}{% endfor %}
+            </p>
+        </div>
+    </div>
+</div>

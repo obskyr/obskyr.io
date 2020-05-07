@@ -1,0 +1,4 @@
+---
+singular: tool
+plural:   tools
+---
