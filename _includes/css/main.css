@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 9px;
 }
 
-.header {
+.header, .footer {
     display: flex;
     align-items: center;
     height: 6em;
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
-.header a {
+.header a, .footer a {
     color: inherit;
     text-decoration: inherit;
     outline: none;
@@ -133,6 +133,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     height: 6em;
     text-align: center;
     color: white;
@@ -140,13 +144,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer > * {
     position: relative;
-    top: 50%;
-    transform: translateY(-55%);
+    top: -2.5%;
 }
 
 .footer svg {
     height: 3.5em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    margin: 0 1em;
+}
+
+.footer .items {
+    font-size: 1.5em;
 }
 
 .text-column {
