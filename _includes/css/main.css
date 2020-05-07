@@ -173,6 +173,10 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
 }
 
+.showcase-item a {
+    outline: none;
+}
+
 .showcase-image-container {
     position: relative;
     width: 400px;
@@ -223,6 +227,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .showcase-description p {
     margin: 0.1em 0;
+}
+
+.showcase-description > a {
+    outline: none;
 }
 
 .showcase-description a h2 {
