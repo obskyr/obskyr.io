@@ -31,6 +31,10 @@ twitter_username: obskyr
 github_username:  obskyr
 theme_color: "#FFB7BF"
 
+exclude:
+  - README.md
+  - README-header.png
+
 empty_array: []
 
 collections:
