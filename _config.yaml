@@ -38,6 +38,11 @@ collections:
   project_tags:
     output: true
     permalink: /projects/tags/:name/
+    order:
+      - fan-translations.md
+      - reverse-engineering.md
+      - electronics.md
+      - tools.md
 
 defaults:
   - scope:
