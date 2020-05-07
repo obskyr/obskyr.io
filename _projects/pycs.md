@@ -1,6 +1,6 @@
 ---
 name:         PYCS
-link:         http://obskyr.github.io/pycs/
+link:         https://obskyr.github.io/pycs/
 image:        pycs.png
 date:         2013-05-10
 display-date: May 2013—Nov 2013

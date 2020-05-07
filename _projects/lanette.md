@@ -1,6 +1,6 @@
 ---
 name:         Lanette's Time Capsule
-link:         http://obskyr.io/lanette/devlog/
+link:         https://obskyr.io/lanette/devlog/
 image:        lanette.png
 date:         2015-10-23
 display-date: Late 2015—Present

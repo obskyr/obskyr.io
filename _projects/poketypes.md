@@ -1,6 +1,6 @@
 ---
 name:         Pokétypes
-link:         http://types.obskyr.io/
+link:         https://types.obskyr.io/
 image:        poketypes.png
 date:         2014-04-05
 display-date: Apr 2014
